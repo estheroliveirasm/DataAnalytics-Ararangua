@@ -1,59 +1,99 @@
-# PyAnalytics: Resolução de Problemas de Análise de Dados e Compartilhamento de Conhecimentos
+# PyAnalytics: Análise e Engenharia de Dados em Saúde 📊🏥
 
-Este repositório armazena o conjunto de projetos estruturados, análises preditivas/exploratórias e pipelines de engenharia de dados desenvolvidos para o ecossistema de Saúde Pública, vinculados à Universidade Federal de Santa Catarina (UFSC).
+Universidade Federal de Santa Catarina (UFSC)  — 2026.1
 
-O objetivo principal deste ecossistema é demonstrar a aplicação prática de bibliotecas Python no consumo de APIs governamentais, na extração de dados tabulares de documentos não estruturados (PDFs) e no desenvolvimento de análises estatísticas regionais baseadas em microdados públicos de saúde.
+Este repositório foi criado para centralizar e documentar o desenvolvimento das minhas atividades práticas e o projeto final do curso **PyAnalytics - Resolução de Problemas de Análise de Dados e Compartilhamento de Conhecimentos** , realizado no primeiro semestre de 2026 na UFSC.
 
----
-
-## Estrutura do Repositório
-
-O repositório está organizado em módulos que refletem a evolução técnica do projeto, dividindo-se entre scripts de automação e notebooks de análise avançada:
-
-* **Atividade Prática 1:** Script em Python voltado para a automação de requisições HTTP, consumo de APIs estruturadas e mapeamento da ocupação hospitalar em nível nacional.
-* **Atividade Prática 2:** Notebook focado em técnicas de Engenharia de Dados, manipulação de arquivos não estruturados e implementação de protocolos de segurança para credenciais.
-* **Projeto Final:** Notebook analítico contendo o estudo de caso detalhado sobre a flutuação e o comportamento da ocupação de leitos hospitalares no município de Araranguá/SC durante o ano de 2022.
+O objetivo principal é aplicar a linguagem Python e suas principais bibliotecas de Data Science para extrair, tratar, analisar e visualizar dados reais, com foco no ecossistema de Saúde Pública.
 
 ---
 
-## Detalhamento Técnico dos Módulos
+## 🛠️ Tecnologias e Bibliotecas Utilizadas
 
-### 1. Consumo de APIs e Dados do DataSUS (Atividade Prática 1)
-* **Objetivo:** Estabelecer uma arquitetura de integração programática com barramentos governamentais para extrair em tempo real indicadores hospitalares de forma dinâmica.
-* **Abordagem Técnica:**
-  * Implementação da biblioteca `requests` para o consumo do endpoint oficial da API de Dados Abertos do DataSUS (Registro de Ocupação Hospitalar COVID-19).
-  * Configuração de segurança via cabeçalhos autenticados (`headers`), injetando chaves de acesso dinâmicas (`chave-api-dados`).
-  * Tratamento do payload bruto: conversão de respostas em formato JSON para estruturas tabulares nativas (`pandas.DataFrame`).
-  * Saneamento e tipagem de dados: conversão de strings numéricas e agregação volumétrica agrupada por Unidade Federativa (UF).
-* **Visualização:** Geração de gráficos estatísticos customizados via `seaborn` e `matplotlib`, ordenando o ranking nacional de registros para facilitar a tomada de decisão assistencial.
+O ecossistema técnico do projeto foi construído utilizando as seguintes ferramentas:
 
-### 2. Engenharia de Dados - Extração de PDFs e Segurança (Atividade Prática 2)
-* **Objetivo:** Ingerir, tratar e converter dados armazenados em formatos não estruturados (PDFs oficiais) para datasets organizados, mitigando riscos de segurança da informação.
-* **Abordagem Técnica:**
-  * Uso do gerenciador isolado de ambiente do Google Colab (`google.colab.userdata`) para captura segura de chaves privadas (Secrets), evitando a exposição de tokens no código fonte (*hardcoding*).
-  * Implementação de rotinas preventivas de verificação de arquivos locais através do módulo nativo `os`.
-  * Utilização da biblioteca `pdfplumber` para a varredura, leitura e extração de matrizes de dados das páginas da Relação Municipal de Medicamentos Essenciais (REMUME 2024).
-  * Aplicação de filtros condicionais lógicos para expurgar registros vazios, nulos ou ruidosos gerados pela conversão do PDF.
-  * Exportação e persistência de dados em arquivo CSV estruturado utilizando codificação de caracteres `utf-8-sig`, garantindo a integridade ortográfica da língua portuguesa.
+* **Linguagem Base:** Python 3.x
+* **Manipulação e Análise de Dados:** `pandas` e `numpy`
+* **Visualização de Dados:** `matplotlib` e `seaborn`
+* 
+**Coleta de Dados e APIs:** `requests` 
 
-### 3. Estudo de Caso Regional: Ocupação de Leitos Hospitalares (Projeto Final)
-* **Objetivo:** Avaliar a pressão e o comportamento do sistema de saúde do município de Araranguá/SC ao longo do ano epidemiológico de 2022, utilizando a base de microdados pública do ESUS-VEPI.
-* **Abordagem Técnica:**
-  * Carga automatizada dos dados de saúde a partir de repositório em nuvem via Google Drive API, restringindo a leitura às colunas críticas para otimização de performance e memória.
-  * Normalização temporal: tratamento e conversão do campo de notificações para objetos nativos do tipo `datetime`, seguidos de ordenação cronológica.
-  * Limpeza de dados faltantes (*NaN*) utilizando imputação controlada por zero (`fillna(0)`), em total conformidade com a lógica de negócio hospitalar (ausência de registro equivalendo a leitos livres).
-  * Execução de cálculos estatísticos complexos e agrupamentos por períodos sazonais através de métodos consolidados do `pandas` e `numpy` (`groupby`, `mean`, `max`, `np.sum`).
-* **Principais Insights Gerados:**
-  * Mapeamento do estresse assistencial focado no primeiro bimestre de 2022, apresentando picos de até 7 pacientes simultâneos em UTI e um acumulado anual de 15 óbitos na região.
-  * Identificação de estabilização absoluta do sistema de saúde local entre os meses de agosto e novembro, registrando média zero de ocupação em leitos críticos, o que evidencia a eficácia das campanhas vacinais e barreiras sanitárias no período.
+
+* 
+**Extração de Dados Não Estruturados:** `pdfplumber` 
+
+
+* 
+**Segurança:** Gerenciador de *Secrets* do Google Colab (`userdata`) 
+
+
 
 ---
 
-## Tecnologias e Dependências do Ecossistema
+## 📝 Conteúdo dos Projetos
 
-* **Python 3:** Linguagem de programação base de todo o ecossistema analítico.
-* **Pandas:** Biblioteca de alto desempenho para fatiamento, limpeza, agrupamento e transformação de datasets.
-* **NumPy:** Computação científica e processamento vetorial de arrays multidimensionais.
-* **Requests:** Cliente HTTP para comunicação e consumo de APIs REST estruturadas.
-* **Pdfplumber:** Motor de parsing e extração de texto e tabelas de arquivos PDF.
-* **Matplotlib & Seaborn:** Bibliotecas de plotagem de dados para geração de gráficos estatísticos e painéis visuais.
+### 🔹 Atividade Prática 1: Desvendando APIs com Python e Dados de Saúde
+
+* 
+**Objetivo:** Introduzir o conceito de APIs e demonstrar o consumo de dados reais de órgãos governamentais na área da Saúde Pública.
+
+
+* 
+**Desenvolvimento:** * Autenticação realizada através da configuração do cabeçalho (*headers*) da requisição com o token credencial.
+
+
+* Consumo de dados de ocupação hospitalar utilizando a biblioteca `requests` para buscar as informações diretamente do DataSUS.
+
+
+* Tratamento de dados convertendo a resposta do servidor para o formato JSON e, sequencialmente, para um DataFrame do Pandas.
+
+
+* Execução de limpeza, filtragem e plotagem de gráficos para análise visual das informações extraídas.
+
+
+
+
+
+### 🔹 Atividade Prática 2: Segurança, Extração de PDFs e Desafio REMUME
+
+* 
+**Objetivo:** Garantir a segurança de credenciais de acesso e manipular dados não estruturados comuns na área da saúde.
+
+
+* **Desenvolvimento:**
+* Configuração de token de API de forma segura utilizando o gerenciador de *Secrets* (`userdata`) do Google Colab, evitando chaves expostas diretamente no código.
+
+
+* Uso da biblioteca `pdfplumber` para acessar, ler e extrair tabelas de medicamentos do documento da REMUME (Relação Municipal de Medicamentos Essenciais).
+
+
+* Estruturação dos dados extraídos em tabelas limpas e tratamento preventivo de linhas vazias para conversão em uma base utilizável.
+
+
+
+
+
+### 🏆 Projeto Final: Análise de Ocupação de Leitos Hospitalares (Araranguá/SC)
+
+* 
+**Objetivo:** Executar um projeto individual de análise de dados focado em dados regionais de uma base pública de saúde de escolha do aluno.
+
+
+* **Desenvolvimento:**
+* **Carga de Dados:** Carga inicial do dataset de Ocupação de Leitos Hospitalares (base pública ESUS-VEPI), isolando colunas específicas de interesse para otimização de memória.
+* **Análise Exploratória e Limpeza:** Identificação de inconformidades nos tipos de dados (datas em formato de texto), conversão temporal estruturada e aplicação de preenchimento de dados faltantes com substituição por zero (`fillna(0)`).
+* **Operações com Pandas e NumPy:** Agrupamento de registros diários em médias mensais (`groupby`) e consolidação de estatísticas acumuladas de óbitos com suporte matemático de alta performance.
+* **Visualização e Insights:** Geração de gráfico de tendências temporais customizado, evidenciando analiticamente a retração da pressão hospitalar e a redução dos índices de ocupação de UTI para zero no segundo semestre do período analisado.
+
+
+
+---
+
+## 👩‍💻 Autoria e Agradecimentos
+
+* **Desenvolvido por:** Esther de Oliveira
+* 
+**Instituição:** Universidade Federal de Santa Catarina (UFSC) 
+---
+
+*README atualizado em 2026.*
