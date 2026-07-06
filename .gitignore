@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Ambientes virtuais locais
+.virtualenv/
+.env
+.venv
+env/
+venv/
+
+# Arquivos de saída gerados pelo código
+*.csv
+*.json
+*.xlsx
+
+# Garante que arquivos PDF possam ser enviados ao repositório
+!*.pdf
+
+# Arquivos temporários do Sistema Operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
