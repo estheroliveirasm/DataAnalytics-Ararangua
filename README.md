@@ -1,16 +1,17 @@
-PyAnalytics: Análise e Engenharia de Dados em Saúde 📊🏥
+## PyAnalytics: Análise e Engenharia de Dados em Saúde 📊🏥
+
 🎓 Universidade Federal de Santa Catarina (UFSC) — 2026.1
 Desenvolvido por: Esther Oliveira
 Projeto: PyAnalytics
 
 Linha de Pesquisa: Resolução de Problemas de Análise de Dados e Compartilhamento de Conhecimentos
 
-🎯 Sobre o Projeto
+## 🎯 Sobre o Projeto
 Este repositório foi meticulosamente desenhado para centralizar a evolução técnica e prática desenvolvida ao longo da jornada PyAnalytics. O core deste ecossistema consiste em aplicar o ecossistema robusto do Python para resolver desafios reais em Saúde Pública, transformando dados brutos ou não estruturados em ativos de informação prontos para o diagnóstico e para a tomada de decisão estratégica.
 
 Toda a infraestrutura lógica e visual do projeto foi sustentada sobre o poder analítico das bibliotecas pandas, numpy, matplotlib, seaborn, requests e pdfplumber, integradas de forma dinâmica ao ambiente do Google Colab.
 
-📝 Ecossistema de Atividades Práticas
+## 📝 Ecossistema de Atividades Práticas
 🔹 Atividade Prática 1: Desvendando APIs com Python e Dados de Saúde
 Foco: Consumo de Dados Governamentais e Infraestrutura de APIs
 
@@ -35,5 +36,5 @@ Construção: O ápice do ecossistema analítico. Implementou-se um pipeline rob
 
 Análise exploratória e estatística completa utilizando dados regionais da base pública ESUS-VEPI do ano de 2022. O trabalho envolveu a carga otimizada do dataset focado no município de Araranguá, conversão de datas textuais para o formato temporal correto e tratamento de valores nulos através da substituição por zero (fillna). Foram realizadas operações de agrupamento mensal com Pandas (groupby) e consolidação estatística do total acumulado de óbitos com suporte do NumPy. A análise foi finalizada com um gráfico de linhas customizado no Matplotlib, demonstrando a evolução e a retração da pressão hospitalar na região.
 
-👩‍💻 Autora
+## 👩‍💻 Autora
 Esther Oliveira Universidade Federal de Santa Catarina • PyAnalytics 2026/1
