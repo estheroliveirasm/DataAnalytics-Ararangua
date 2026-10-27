@@ -1,7 +1,9 @@
 ## PyAnalytics: Análise e Engenharia de Dados em Saúde 📊🏥
 
 🎓 Universidade Federal de Santa Catarina (UFSC) — 2026.1
+
 Desenvolvido por: Esther Oliveira
+
 Projeto: PyAnalytics
 
 Linha de Pesquisa: Resolução de Problemas de Análise de Dados e Compartilhamento de Conhecimentos
@@ -38,4 +40,5 @@ Análise exploratória e estatística completa utilizando dados regionais da bas
 
 ## 👩‍💻 Autora
 Esther Oliveira 
+
 Universidade Federal de Santa Catarina • PyAnalytics 2026/1
