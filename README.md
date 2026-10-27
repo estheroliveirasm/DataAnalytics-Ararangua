@@ -37,4 +37,5 @@ Construção: O ápice do ecossistema analítico. Implementou-se um pipeline rob
 Análise exploratória e estatística completa utilizando dados regionais da base pública ESUS-VEPI do ano de 2022. O trabalho envolveu a carga otimizada do dataset focado no município de Araranguá, conversão de datas textuais para o formato temporal correto e tratamento de valores nulos através da substituição por zero (fillna). Foram realizadas operações de agrupamento mensal com Pandas (groupby) e consolidação estatística do total acumulado de óbitos com suporte do NumPy. A análise foi finalizada com um gráfico de linhas customizado no Matplotlib, demonstrando a evolução e a retração da pressão hospitalar na região.
 
 ## 👩‍💻 Autora
-Esther Oliveira Universidade Federal de Santa Catarina • PyAnalytics 2026/1
+Esther Oliveira 
+Universidade Federal de Santa Catarina • PyAnalytics 2026/1
